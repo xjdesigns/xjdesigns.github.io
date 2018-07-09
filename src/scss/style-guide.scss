@@ -1,0 +1,163 @@
+// STYLEGUIDE NAMESPACE
+$nssg: 'sg-';
+
+@import "styleguide/supports";
+@import "base/var";
+
+.#{$nssg}divider {
+  margin: 52px 0px;
+  height: 1px;
+  background: gray;
+}
+
+.#{$nssg}grid {
+  padding: 12px;
+  background: $brand-primary;
+  margin: 12px 0;
+
+  &--h100 {
+    height: 100px;
+  }
+}
+
+.#{$nssg}view-row {
+  margin: 12px 0px 0px;
+}
+
+code {
+  background-color: red;
+  padding: 3px 6px;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: white;
+}
+
+code.#{$nssg}code-block {
+  background-color: transparent;
+  display: block;
+	font-size: 12px;
+	font-family: monospace;
+	line-height: 1.7;
+	overflow: auto;
+}
+
+// TODO:: this should just be a component
+// HERO
+.#{$nssg}hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+  margin-top: 72px;
+  background: #ededed;
+
+  &__elem {
+    flex: 0 0 auto;
+    margin: 48px auto;
+
+    &--min {
+      min-width: 40vw;
+      max-width: 60vw;
+    }
+  }
+}
+
+.#{$nssg}pixel-parent {
+  perspective: 50em;
+}
+.#{$nssg}pixel {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background: white;
+  margin: 6px;
+
+  // animation: liftOff 4s infinite ease-in-out;
+}
+
+// TODO: this should be a core element
+.#{$nssg}countdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+
+  & > div {
+    flex: 0 0 25%;
+    text-align: center;
+
+    p:first-child {
+      font-size: 4rem;
+      font-weight: 300;
+    }
+  }
+}
+
+@keyframes liftOff {
+  0%, 100% {
+    transform: translateZ(0px);
+  }
+  50% {
+    transform: translateZ(200px);
+  }
+}
+
+.#{$nssg}color-presentation {
+  display: flex;
+  align-items: center;
+  flex-flow: wrap row;
+  margin: 24px 0;
+
+  .#{$nssg}color-drop {
+    flex: 0 0 46px;
+    height: 46px;
+    margin-right: 12px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+
+    &:hover {
+      box-shadow: 2px 2px 1px rgba(0,0,0,0.3);
+    }
+  }
+}
+.#{$nssg}color-information {
+  margin-top: 12px;
+}
+
+// COLOR PALETTE
+$coloring: (
+  pr: $brand-primary,
+  sd: $brand-secondary,
+  tr: $brand-tertiary,
+  g1: $black,
+);
+
+.#{$nssg}color-palette {
+  .#{$nssg}color-tile {
+    display: inline-block;
+    vertical-align: middle;
+    width: 31%;
+    margin-right: 24px;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 60px;
+      height: 60px;
+      margin: 0 0 12px 12px;
+      border-radius: 50%;
+    }
+  }
+}
+@each $vr, $cr in $coloring {
+  .#{$nssg}color-palette {
+    .#{$nssg}color-tile--#{$vr} {
+      &::before {
+        background: $cr;
+      }
+    }
+  }
+}

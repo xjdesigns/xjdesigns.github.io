@@ -1,0 +1,90 @@
+// SPX TILES
+.#{$ns}tiles {
+  display: flex;
+  flex-flow: row wrap;
+
+  &:not(:first-child) {
+    margin: 24px 0;
+  }
+
+  app-tile {
+    flex: 0 0 200px;
+    display: block;
+
+    &.app-tile--fave {
+      flex: 1 0 400px;
+    }
+  }
+
+  &__tile {
+    display: flex;
+    align-items: flex-end;
+    min-height: 200px;
+    position: relative;
+    cursor: pointer;
+    background: $brand-primary;
+    margin: 3px;
+    padding: 6px;
+    color: white;
+    @include elevation-1;
+    transition: box-shadow .3s ease;
+
+    &:hover {
+      @include elevation-3;
+
+      .#{$ns}tile-actions {
+        max-height: 100px;
+      }
+    }
+
+    &--icon {
+      &::before {
+        content: attr(data-icon);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+ // CONTENTS
+.#{$ns}contents {
+  flex: 0 1 90%;
+
+  &__desc {
+    font-size: 10px;
+  }
+}
+
+.#{$ns}fave {
+  flex: 1 1 10%;
+  text-align: right;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &.is-favorited {
+    color: red;
+  }
+}
+
+.#{$ns}tile-actions {
+  margin: 6px 0 0;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .5s ease-in-out;
+
+  a {
+    color: white;
+    font-size: 10px;
+    display: block;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

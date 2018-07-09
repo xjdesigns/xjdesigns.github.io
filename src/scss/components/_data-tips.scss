@@ -1,0 +1,74 @@
+//////////////////////////
+// ADVANCED TOOL TIP //
+//////////////////////////
+.#{$ns}adv-tip {
+  position: relative;
+
+  &__content {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: -9999px;
+    padding: 12px 18px;
+    width: 220px;
+    background-color: $b-01;
+    color: white;
+    font-size: .75rem;
+    text-align: center;
+    line-height: 1.4;
+    border-radius: 6px;
+    opacity: 0;
+    transform: translateX(-50%) scale(0);
+    @include elevation-1;
+    transition: opacity .2s ease-in .2s, left .1s .6s, transform .4s ease-in .2s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: -6px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: $primary;
+      border: 1px solid white;
+    }
+  }
+
+  &:hover {
+    .#{$ns}adv-tip__content {
+      left: 50%;
+      opacity: 1;
+      transform: translateX(-50%) scale(1);
+      transition: opacity .4s ease-out .2s, transform .4s ease-out .4s;
+    }
+  }
+
+  &--left,
+  &--right {
+    &:hover {
+      .#{$ns}adv-tip__content {
+        top: 50%;
+        bottom: auto;
+        transform: translate(0%, -50%) scale(1);
+      }
+    }
+  }
+
+  &--left {
+    &:hover {
+      .#{$ns}adv-tip__content {
+        left: auto;
+        right: calc(100% + 12px);
+      }
+    }
+  }
+
+  &--right {
+    &:hover {
+      .#{$ns}adv-tip__content {
+        left: calc(100% + 12px);
+        right: auto;
+      }
+    }
+  }
+}

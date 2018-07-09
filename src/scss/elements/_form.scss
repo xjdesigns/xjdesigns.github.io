@@ -1,0 +1,47 @@
+// FORMS
+.#{$ns}form {
+  input, textarea, label {
+    width: 100%;
+    font-size: .75rem;
+
+    &:focus:not(label), &:active:not(label) {
+      outline: 0;
+      border: 1px solid $brand-primary;
+    }
+  }
+
+  input, textarea {
+    border: 1px solid $grey-l1;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+  // LABEL //
+  .#{$ns}label {
+    display: block;
+    font-size: .75rem;
+    margin-bottom: 3px;
+    color: $grey-l1;
+  }
+
+  // INPUT
+  .#{$ns}input,
+  .#{$ns}textarea {
+    // ERROR STATE
+    &.has-error {
+      border-color: $error;
+      color: $error;
+    }
+  }
+
+  // search
+  .#{$ns}search {
+    .#{$ns}input {
+      &[type=search] {
+        width: calc(100% - 62px);
+        margin-right: 6px;
+      }
+    }
+  }
+}
