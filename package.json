@@ -2,6 +2,7 @@
   "name": "6px",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://xjdesigns.github.io/Segment-CSS",
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -11,6 +12,7 @@
     "redux": "^4.0.0"
   },
   "devDependencies": {
+    "gh-pages": "^1.2.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-notify": "^3.2.0",
@@ -28,6 +30,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "sass": "gulp watch",
-    "sixpixels": "gulp prod"
+    "sixpixels": "gulp prod",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
