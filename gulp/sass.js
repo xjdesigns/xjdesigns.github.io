@@ -33,7 +33,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('prod', function() {
-  return gulp.src('./src/styles/scss/*.{sass,scss}')
+  return gulp.src('./src/styles/scss/style.{sass,scss}')
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(autoprefixer({ browsers: ['> 1%', 'last 4 versions', 'Firefox ESR', 'Opera 12.1'] }))
     .pipe(gulp.dest('./SIXPIXELS'))

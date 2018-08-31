@@ -159,6 +159,12 @@ $header: 72px;
   & > li {
     position: relative;
 
+    a {
+      display: block;
+      color: white;
+      text-decoration: none;
+    }
+
     &.has-menu {
       &::before {
         content: 'keyboard_arrow_down';
@@ -294,4 +300,8 @@ $header: 72px;
       height: 12px;
     }
   }
+}
+
+pre {
+  background: white !important;
 }
