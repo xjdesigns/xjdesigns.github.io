@@ -4,7 +4,7 @@ export class Footer extends Component {
   render () {
     return (
       <footer className="app-footer">
-        <p>SIX PIXELS 2017</p>
+        <p>SEGMENT CSS 2018</p>
         <p>Created and maintained by Jason Jacobson</p>
       </footer>
     )

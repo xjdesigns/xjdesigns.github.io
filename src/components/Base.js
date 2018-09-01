@@ -5,9 +5,19 @@ export class BasePage extends Component {
   render () {
     return (
       <div>
+        <div className="sg-hero">
+          <div className="sg-hero__elem">
+            <div className="sg-proj-title">
+              <h1>Variables and Base</h1>
+            </div>
+          </div>
+        </div>
+
         <div class="app-view">
-          <h1>Variables and Base</h1>
-          <p>SIX PIXELS uses a single variable file for custom configurations.</p>
+          <p>SEGMENT CSS uses a single variable file for custom configurations.</p>
+          <p>This makes customizing fonts, colors, grid changes, ligature font family, easy to do.</p>
+          <p>SEGMENT CSS uses ligatures for the icons, and is built with material icons in mind. Using a different library should be very easy but might require some small tweaks depeneding on it was constucted.</p>
+          <p>Support for SVG is in the works, but currently does not come packaged.</p>
 
           <div class="sg-divider"></div>
           <h2>Base HTML</h2>

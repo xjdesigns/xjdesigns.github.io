@@ -26,7 +26,14 @@ export class Homepage extends Component {
           <div>
             <h2>Namespace support</h2>
             <p>The idea is simple, prepend a namespace to all your classes so it becomes more unique. We all have used .btn as a class name before, guilty as charged. Now we do .spx-btn and this is my identifier ".spx-"</p>
-            <p></p>
+          </div>
+
+          <div className="sg-divider"></div>
+
+          <div>
+            <h2>Style scoping</h2>
+            <p>Using namespace support along with writing in Sass, scoping is handled to its parent element. This allows for easily writing styles that require to be a child of the parent. Following this pattern follows the similiar idea of ITCSS for specificity.</p>
+            <p>Keeping specificity as low as possible helps create a better model for scoping, as everything becomes handled at one level higher or modifier classes.</p>
           </div>
 
           <div className="sg-divider"></div>
@@ -37,21 +44,20 @@ export class Homepage extends Component {
             <p>My solution is to work in the Atomic Design pattern but apply this to code. I extend this to the technical even further by only allowing elements to control there layout once it hits a component or layout level. So my .spx-btn will always have the expectation that it sits flush left to its page level or elements box model.</p>
             <p>Now think of outer containers that control its margins and layout. You get more to pure expected behavior knowing more closely how it aligns.</p>
             <p>With that think of shaping the elements as:</p>
-            • atom = lowest element (such as buttons & inputs)
-            <br/>
-            • molecule = the element combining multiple atoms(this can control layout with modifier classes)
-            <br/>
-            • organism = the element that uses a combination of atoms and molecules(this can control layout with no additional modifier classes needed, but extending is always nice)
-            <br/>
-            • page = this is what is in your dom all at once
+            <ul className="spx-list">
+              <li>atom = lowest element (such as buttons & inputs)</li>
+              <li>molecule = the element combining multiple atoms(this can control layout with modifier classes)</li>
+              <li>organism = the element that uses a combination of atoms and molecules(this can control layout with no additional modifier classes needed, but extending is always nice)</li>
+              <li>page = this is what is in your dom all at once</li>
+            </ul>
           </div>
 
           <div className="sg-divider"></div>
 
           <div>
-            <p>SIX PIXELS was created with the idea to move to an PURE CSS UI framework/pattern lab.</p>
+            <p>SEGMENT was created with the idea to move to an PURE CSS UI framework/pattern lab.</p>
             <p>There are so many amazing frameworks out there that is gets hard to choose which one. A lot of the frameworks under the hood have very complex SASS or LESS being written which can get hard to follow, or just be a bit for someone wanting to customize slightly. A lot of the heavy hitter frameworks also come with a heavy page weight, in instances of 100kb+. That is really not all that bad, but dump a theme on top, write custom css for your project are all real world things. My goal was to create a base framework, that gives you out of the box browser support following the principles laid out by Brad Frost. Atomic Design/Pattern Labs and retrofit that idea to css. With it being small you have just that much more play with custom code before you even reach to base filesize of some of the other frameworks. I also used a single variable file and went with a more readable code approach so it should be easy for you to fork and customize without the need for a theme. You can even fork and create a theme, I will leave the imagination of up to you.</p>
-            <p>Here are the key benefits to using SIX PIXELS</p>
+            <p>Here are the key benefits to using SEGMENT CSS</p>
 
             <div className="sg-divider"></div>
 
@@ -73,16 +79,6 @@ export class Homepage extends Component {
               <li>ZERO JS/External dependancies</li>
             </ul>
           </div>
-
-<CodeSnippet>
-  {`
-    <button className="spx-btn spx-btn--pr">I am button</button>
-    <button className="spx-btn spx-btn--pr spx-btn--icon" data-icon="check">Icon</button>
-    <button className="spx-btn spx-btn--pr spx-btn--material" data-icon="check">Material</button>
-    <button className="spx-btn spx-btn--pr spx-btn--circle" data-icon="check"></button>
-    <button className="spx-btn spx-btn--sm spx-btn--pr spx-btn--material" data-icon="check">Small</button>
-  `}
-</CodeSnippet>
         </div>
       </div>
     )
