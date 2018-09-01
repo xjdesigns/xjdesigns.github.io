@@ -2,7 +2,7 @@
   "name": "6px",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://xjdesigns.github.io/Segment-CSS",
+  "homepage": "http://xjdesigns.github.io/",
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -32,6 +32,6 @@
     "sass": "gulp watch",
     "sixpixels": "gulp prod",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -b master -d build"
   }
 }
