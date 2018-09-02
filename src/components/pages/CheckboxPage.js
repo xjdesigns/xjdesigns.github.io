@@ -18,7 +18,7 @@ export class CheckboxPage extends Component {
 
         <div className="app-view">
           <div className="flex">
-            <div className="flex__i--xs-6">
+            <div class="flex__i--xs-12 flex__i--sm-6">
               <label className="spx-checkbox">
                 <input type="checkbox" name="checkbox" />
                 <div className="spx-checkbox__box" data-icon="check"></div>
@@ -39,7 +39,7 @@ export class CheckboxPage extends Component {
 
 
             </div>
-            <div className="flex__i--xs-6">
+            <div class="flex__i--xs-12 flex__i--sm-6">
               <h2>Checkboxes</h2>
               <p>
                 <span className="spx-pill spx-pill--pr">Stable</span>

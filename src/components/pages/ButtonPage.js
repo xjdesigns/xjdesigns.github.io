@@ -13,7 +13,7 @@ export class ButtonPage extends Component {
 
         <div className="app-view">
           <div className="flex">
-            <div className="flex__i--xs-6">
+            <div class="flex__i--xs-12 flex__i--sm-6">
               <div className="sg-view-row">
                 <button className="spx-btn spx-btn--pr">I am button</button>
                 <button className="spx-btn spx-btn--pr spx-btn--icon" data-icon="check">Icon</button>
@@ -44,7 +44,7 @@ export class ButtonPage extends Component {
   `}
 </CodeSnippet>
             </div>
-            <div className="flex__i--xs-6">
+            <div class="flex__i--xs-12 flex__i--sm-6">
               <h2>Buttons</h2>
               <p>
                 <span className="spx-pill spx-pill--pr">Stable</span>
